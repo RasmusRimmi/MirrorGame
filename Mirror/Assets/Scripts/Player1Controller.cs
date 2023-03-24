@@ -5,12 +5,18 @@ using UnityEngine;
 public class Player1Controller : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 8f;
-    private float jumpingPower = 16f;
+    public float speed;
+    public float jumpingPower;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
+    private void Start()
+    {
+        speed = 5f;
+        jumpingPower = 10f;
+    }
 
     void Update()
     {
