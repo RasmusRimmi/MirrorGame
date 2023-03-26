@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Platform : MonoBehaviour
+public class DPlatform2 : MonoBehaviour
 {
-    public float timeToTogglePlatform = 2;
+    public float timeToTogglePlatform = 2; 
     public float currentTime = 0;
     public new bool enabled = true;
     void Start()
     {
         enabled = true;
+        currentTime = 2; // starting the timer at two seconds makes it so the platform is gone at the start
     }
 
     void Update()
