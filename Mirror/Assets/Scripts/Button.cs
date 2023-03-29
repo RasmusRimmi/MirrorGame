@@ -8,15 +8,16 @@ public class Button : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        wall.SetActive(false);
 
-        transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+       wall.SetActive(false);
+
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        wall.SetActive(true);
+       
+       wall.SetActive(true);
 
-        transform.position = new Vector3(transform.position.x, 0.56f, transform.position.z);
     }
 }

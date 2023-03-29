@@ -48,6 +48,8 @@ public class Powerups : MonoBehaviour
             powerUp.SetActive(false);
 
             player1.transform.localScale = bigScale;
+
+            player1.rb.mass = 30f;
         }
 
         if (gameObject.CompareTag("Bib"))

@@ -9,6 +9,8 @@ TagManager:
   - Disable
   - Bob
   - Bib
+  - UpperButton
+  - LowerButton
   layers:
   - Default
   - TransparentFX

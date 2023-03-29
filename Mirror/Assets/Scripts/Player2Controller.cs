@@ -5,12 +5,18 @@ using UnityEngine;
 public class Player2Controller : MonoBehaviour
 {
     private float horizontal;
-    public float speed = 8f;
-    public float jumpingPower = 16f;
+    public float speed;
+    public float jumpingPower;
 
-    [SerializeField] private Rigidbody2D rb;
+    public Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
+    private void Start()
+    {
+        speed = 5f;
+        jumpingPower = 12f;   
+    }
 
     void Update()
     {
@@ -21,10 +27,6 @@ public class Player2Controller : MonoBehaviour
             rb.velocity = new Vector2(-rb.velocity.x, -jumpingPower);
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y < 0f)
-        {
-            rb.velocity = new Vector2(-rb.velocity.x, -rb.velocity.y * -0.5f);
-        }
     }
 
     private void FixedUpdate()
