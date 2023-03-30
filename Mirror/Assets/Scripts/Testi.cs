@@ -19,6 +19,8 @@ public class Testi : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("TutorialLevel1");
+
+      SceneManager.LoadScene("TutorialLevel2");
+
     }
 }

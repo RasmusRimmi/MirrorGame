@@ -6,6 +6,7 @@ public class Powerups : MonoBehaviour
 {
     public GameObject powerUp;
     public Player1Controller player1;
+    public Player2Controller player2;
 
     private Vector2 normalScale = new Vector2(1.0f, 1.0f);
     private Vector2 bigScale = new Vector2(2.0f, 2.0f);
@@ -30,7 +31,9 @@ public class Powerups : MonoBehaviour
         {
             powerUp.SetActive(false);
 
-            player1.jumpingPower = 15f;
+            player1.jumpingPower = 14f;
+            player2.jumpingPower = 14f;
+            
         }
 
         if (gameObject.CompareTag("Disable"))
